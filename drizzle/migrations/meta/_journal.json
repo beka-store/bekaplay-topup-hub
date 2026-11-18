@@ -1,0 +1,48 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1794993685330,
+      "tag": "0000_beka_store_core",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1794993696850,
+      "tag": "0001_receipts_policies",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1794993717165,
+      "tag": "0002_wallet_payment_orders",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1794993732309,
+      "tag": "0003_owner_email_allowlist",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1794993744117,
+      "tag": "0004_customer_reviews",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1794993761338,
+      "tag": "0005_phone_login_requests",
+      "breakpoints": true
+    }
+  ]
+}
