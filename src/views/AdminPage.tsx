@@ -33,7 +33,7 @@ const TAB_CONTENT: Record<Tab, () => ReactNode> = {
 export default function AdminPage() {
   const navigate = useNavigate();
   const { user, isOwner, isLoading } = useAuth();
-  const [tab, setTab] = useState<Tab>('topups');
+  const [tab, setTab] = useState<Tab>('logins');
 
   if (isLoading) return <StatusScreen title="جاري التحقق من الصلاحيات..." loading />;
   if (!user) return <SignInPanel />;

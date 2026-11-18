@@ -40,8 +40,8 @@
       "capability": "authorization",
       "source": "user_roles + is_owner() + owner_email_allowlist",
       "outcome": "migrate",
-      "status": "verified",
-      "next_action": "Owner email added to allowlist; applies when that account signs up and confirms"
+      "status": "pending",
+      "next_action": "Waiting for the owner email to add to owner_email_allowlist"
     },
     {
       "capability": "storage:receipts_bucket",
@@ -72,18 +72,18 @@
       "next_action": "Enabled with email confirmation"
     },
     {
-      "capability": "auth:phone_sms",
-      "source": "signInWithOtp phone",
-      "outcome": "migrate",
-      "status": "blocked",
-      "next_action": "Provider returns phone_provider_disabled; user must enable phone sign-in and enter SMS provider credentials in More → Users → Settings → Phone"
+      "capability": "auth:phone_whatsapp",
+      "source": "SMS removed; WhatsApp code + owner approval",
+      "outcome": "replace",
+      "status": "verified",
+      "next_action": "Customer sign-in after owner approval verified in preview"
     },
     {
       "capability": "asset:logo",
       "source": "beka-store-logo.jpg asset pointer from old project",
       "outcome": "migrate",
       "status": "verified",
-      "next_action": "Logo re-hosted in this project"
+      "next_action": "Logo re-hosted in this project (new asset)"
     },
     {
       "capability": "public_endpoints / webhooks / schedules",
