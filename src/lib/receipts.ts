@@ -22,7 +22,9 @@ export async function uploadReceipt(receipt: File): Promise<string | null> {
   const extension = RECEIPT_EXTENSIONS[receipt.type];
   if (!extension) return null;
 
-  const receiptPath = `${crypto.randomUUID()}.${extension}`;
+  const userId = (await supabase.auth.getUser()).data.user?.id;
+  if (!userId) return null;
+  const receiptPath = `${userId}/${crypto.randomUUID()}.${extension}`;
   try {
     const { error } = await supabase.storage.from('receipts').upload(receiptPath, receipt, {
       contentType: receipt.type,
